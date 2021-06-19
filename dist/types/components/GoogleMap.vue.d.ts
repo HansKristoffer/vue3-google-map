@@ -49,7 +49,7 @@ declare const _default: import("vue").DefineComponent<{
     mapTypeId: {
         type: PropType<string>;
     };
-    mapIds: PropType<string[]>;
+    mapId: StringConstructor;
     maxZoom: NumberConstructor;
     minZoom: NumberConstructor;
     noClear: {
@@ -533,7 +533,7 @@ declare const _default: import("vue").DefineComponent<{
     mapTypeControl?: boolean | undefined;
     mapTypeControlOptions?: google.maps.MapTypeControlOptions | undefined;
     mapTypeId?: string | undefined;
-    mapIds?: string[] | undefined;
+    mapId?: string | undefined;
     maxZoom?: number | undefined;
     minZoom?: number | undefined;
     noClear?: boolean | undefined;
