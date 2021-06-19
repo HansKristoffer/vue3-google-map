@@ -48,6 +48,7 @@ export default defineComponent({
     mapTypeId: {
       type: [Number, String] as PropType<IMapTypeId | string>,
     },
+    mapIds: Array as PropType<string[]>,
     maxZoom: Number,
     minZoom: Number,
     noClear: { type: Boolean, default: undefined },
@@ -183,6 +184,7 @@ export default defineComponent({
       try {
         loaderInstance.value = new Loader({
           apiKey: props.apiKey,
+          mapIds: props.mapIds,
           version: props.version || "weekly",
           libraries: props.libraries || ["places"],
           language: props.language,
