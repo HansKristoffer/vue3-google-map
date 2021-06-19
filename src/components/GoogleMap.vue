@@ -71,7 +71,6 @@ export default defineComponent({
   },
   emits: mapEvents,
   setup(props, { emit }) {
-    console.log('map setup', props)
     const mapRef = ref<HTMLElement | null>(null);
     const ready = ref(false);
     const map = ref<IMap | null>(null);
@@ -184,7 +183,6 @@ export default defineComponent({
 
     onMounted(() => {
       try {
-        console.log('map onMounted', props)
         loaderInstance.value = new Loader({
           apiKey: props.apiKey,
           mapIds: props.mapId ? [ props.mapId ] : undefined,
