@@ -48,7 +48,7 @@ export default defineComponent({
     mapTypeId: {
       type: [Number, String] as PropType<IMapTypeId | string>,
     },
-    mapIds: Array as PropType<string[]>,
+    mapId: String,
     maxZoom: Number,
     minZoom: Number,
     noClear: { type: Boolean, default: undefined },
@@ -85,6 +85,7 @@ export default defineComponent({
       const opts = {
         backgroundColor: props.backgroundColor,
         center: props.center,
+        mapId: props.mapId,
         clickableIcons: props.clickableIcons,
         controlSize: props.controlSize,
         disableDefaultUI: props.disableDefaultUi,
@@ -182,9 +183,10 @@ export default defineComponent({
 
     onMounted(() => {
       try {
+        console.log('map onMounted', props)
         loaderInstance.value = new Loader({
           apiKey: props.apiKey,
-          mapIds: props.mapIds,
+          mapIds: props.mapId ? [ props.mapId ] : undefined,
           version: props.version || "weekly",
           libraries: props.libraries || ["places"],
           language: props.language,
