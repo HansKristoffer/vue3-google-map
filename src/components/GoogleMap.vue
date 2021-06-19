@@ -71,6 +71,7 @@ export default defineComponent({
   },
   emits: mapEvents,
   setup(props, { emit }) {
+    console.log('map setup', props)
     const mapRef = ref<HTMLElement | null>(null);
     const ready = ref(false);
     const map = ref<IMap | null>(null);
