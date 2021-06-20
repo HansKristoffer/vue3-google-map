@@ -3,7 +3,7 @@ import * as themes from "../themes/index";
 export declare type IGoogleMapsAPI = typeof google.maps;
 export declare type IMap = google.maps.Map;
 export declare type IMapOptions = google.maps.MapOptions;
-export declare type ILatLng = google.maps.LatLng;
+export declare type ILatLng = google.maps.LatLngLiteral;
 export declare type IControlPosition = keyof typeof google.maps.ControlPosition;
 export declare type IScaleControlStyle = google.maps.ScaleControlStyle;
 export declare type IMapTypeControlOptions = google.maps.MapTypeControlOptions;
